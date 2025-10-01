@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Certificate Course on Urban Informatics and Planning Techniques</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<style>
+  :root{
+    --primary:#0057ff;
+    --secondary:#05c3ff;
+    --accent:#ff7a59;
+    --ink:#101318;
+    --paper:#f4f7fb;
+    --card:#ffffff;
+    --dark:#0b1830;
+  }
+  *{box-sizing:border-box}
+  html,body{margin:0;background:var(--paper);color:#1d232f;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif}
+  a{color:var(--primary);text-decoration:none}
+  a:hover{text-decoration:underline}
+
+  /* HERO */
+  .hero{position:relative;min-height:70vh;width:100%;overflow:hidden;color:#fff;display:flex;align-items:center;justify-content:center;text-align:center;background:#0b1830}
+  .slide{position:absolute;inset:0;background-size:cover;background-position:center;opacity:0;transform:scale(1.05);transition:opacity 1200ms ease, transform 6000ms ease}
+  .slide.active{opacity:1;transform:scale(1)}
+  .hero::before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.25),rgba(0,0,0,.55));z-index:1}
+  .hero-inner{position:relative;z-index:2;max-width:1200px;padding:28px}
+  .title{margin:0 0 8px;font-weight:800;line-height:1.08;font-size:clamp(32px,3.6vw,52px);text-shadow:0 10px 30px rgba(0,0,0,.55)}
+  .subtitle{margin:0;opacity:.95;font-size:clamp(14px,1.4vw,18px)}
+
+  /* CTA */
+  .cta{max-width:1200px;margin:16px auto 28px;background:linear-gradient(90deg,#ffffffd6,#ffffffe8);border-radius:16px;box-shadow:0 18px 32px rgba(0,0,0,.12);padding:14px 18px}
+  .cta-row{display:flex;gap:16px;align-items:center;justify-content:space-between;flex-wrap:wrap}
+  .cta-left{display:flex;gap:12px;align-items:center;flex-wrap:wrap}
+  .cta-left .badge{background:#1f2937;color:#fff;border-radius:999px;padding:8px 14px;font-weight:800}
+  .cta-contacts{display:flex;gap:10px;align-items:center;flex-wrap:wrap}
+  .wa{display:inline-flex;align-items:center;gap:8px;background:#1fa955;color:#fff;border-radius:10px;padding:10px 12px;font-weight:700;box-shadow:0 8px 16px rgba(24,160,69,.25)}
+  .wa:hover{filter:brightness(1.05)}
+  .cta-btn{display:inline-flex;align-items:center;gap:10px;background:linear-gradient(90deg,var(--primary),var(--secondary));color:#fff;border-radius:12px;padding:14px 20px;font-weight:800;box-shadow:0 12px 24px rgba(0,87,255,.25)}
+  .cta-btn:hover{filter:brightness(1.06)}
+
+  /* BASIC INFO */
+  .basic{max-width:1200px;margin:0 auto 10px;padding:0 16px}
+  .basic-card{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;background:var(--card);border-radius:14px;padding:16px 18px;box-shadow:0 10px 22px rgba(0,0,0,.08)}
+  .basic-item{display:flex;align-items:center;gap:10px;font-weight:700}
+  .basic-item i{color:var(--primary)}
+
+  /* SECTIONS */
+  .wrap{max-width:1200px;margin:0 auto;padding:0 16px 60px}
+  .section-card{transition:transform .25s ease, box-shadow .25s ease;position:relative;overflow:hidden;border-radius:16px;background:#fff;box-shadow:0 16px 26px rgba(0,0,0,.08);margin-top:22px}
+  .section-card:hover{transform:translateY(-6px);box-shadow:0 10px 20px rgba(0,0,0,.15),0 30px 50px rgba(0,0,0,.18)}
+  .section-card .bg{position:absolute;inset:0;background-size:cover;background-position:center;opacity:.18}
+  .section-card .overlay{position:relative;padding:28px}
+  h2.section{margin:6px 0 12px;color:var(--primary);font-size:clamp(22px,2.4vw,30px)}
+  h3{margin:18px 0 8px;color:#0b1830}
+  h4{margin:12px 0 6px}
+  ul{margin:6px 0 16px 18px}
+  li{margin:6px 0}
+  .two-col{display:grid;gap:18px;grid-template-columns:repeat(2,minmax(0,1fr))}
+  @media (max-width:900px){.two-col{grid-template-columns:1fr}.basic-card{grid-template-columns:1fr}}
+
+  /* VIDEO */
+  .video{position:relative;padding-top:56.25%;border-radius:16px;overflow:hidden;background:#000;box-shadow:0 12px 24px rgba(0,0,0,.2)}
+  .video iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+
+  footer{background:var(--dark);color:#cfe9ff;text-align:center;padding:20px;margin-top:36px}
+</style>
+</head>
+<body>
+
+<!-- HERO -->
+<header class="hero">
+  <div class="hero-inner">
+    <h1 class="title">Certificate Course on Urban Informatics and Planning Techniques</h1>
+    <p class="subtitle">Department of Town &amp; Country Planning, University of Moratuwa</p>
+  </div>
+</header>
+
+<!-- CTA -->
+<div class="cta">
+  <div class="cta-row">
+    <div class="cta-left">
+      <span class="badge"><i class="fa-solid fa-graduation-cap"></i> Enroll now for the next intake</span>
+      <div class="cta-contacts">
+        <a class="wa" href="https://wa.me/94714953771" target="_blank"><i class="fa-brands fa-whatsapp"></i> +94 71 495 3771</a>
+        <a class="wa" href="https://wa.me/94778346251" target="_blank"><i class="fa-brands fa-whatsapp"></i> +94 77 834 6251</a>
+      </div>
+    </div>
+    <a class="cta-btn" href="https://forms.gle/BQdDPDBQMephXeS49" target="_blank"><i class="fa-solid fa-user-plus"></i> Register Now</a>
+  </div>
+</div>
+
+<!-- BASIC INFO -->
+<div class="basic">
+  <div class="basic-card">
+    <div class="basic-item"><i class="fa-regular fa-calendar-check"></i> Application closing date: <strong>20th of October</strong></div>
+    <div class="basic-item"><i class="fa-solid fa-coins"></i> Course fee: <strong>45,000 LKR</strong></div>
+    <div class="basic-item"><i class="fa-solid fa-chalkboard-user"></i> Lecture mode: <strong>Both Physical [30 hrs] &amp; Online [15 hrs], every Sunday</strong></div>
+  </div>
+</div>
+
+<div class="wrap">
+
+  <!-- INTRO -->
+  <section class="section-card">
+    <div class="overlay">
+      <h2 class="section">Brief Introduction about the Course</h2>
+      <p>This professional course provides participants with advanced knowledge in urban informatics, geospatial technologies, and AI-driven solutions. It combines cutting-edge techniques such as field data collection, Web-GIS, remote sensing, AI-powered object detection, urban big data analytics, and drone applications. The program is designed for professionals seeking to transform spatial data into actionable insights for smarter planning, monitoring, and decision-making.</p>
+    </div>
+  </section>
+
+  <!-- DAY 1 -->
+  <section class="section-card">
+    <div class="overlay">
+      <h2 class="section">Day 1 – Warm-up Session</h2>
+      <h4>Content</h4>
+      <ul><li>Introduction to modern technologies (AI, Remote Sensing, IoT, Web-GIS, Drones).</li><li>Basics: GIS platforms, Google Earth Engine, Web-GIS interfaces.</li></ul>
+      <h4>Activities</h4>
+      <ul><li>Hands-on orientation with course software stack.</li><li>Case studies from Sri Lanka and globally.</li></ul>
+      <h4>Applications of Knowledge</h4>
+      <ul><li>Understand global technological trends.</li><li>Build readiness for advanced workflows.</li></ul>
+    </div>
+  </section>
+
+  <!-- DAY 2 -->
+  <section class="section-card">
+    <div class="overlay">
+      <h2 class="section">Day 2 – Location-Based Services & Field Data Collection</h2>
+      <h4>Content</h4>
+      <ul><li>Mobile mapping using open-source apps.</li><li>Real-time database updating.</li><li>Dashboard visualization.</li></ul>
+      <h4>Activities</h4>
+      <ul><li>Field survey (socio-economic, tree inventory, utilities).</li><li>Sync to central DB + live dashboard.</li></ul>
+      <h4>Applications of Knowledge</h4>
+      <ul><li>Socio-economic surveys, tree inventories, utility surveys.</li><li>Agriculture plot monitoring.</li><li>Disaster rapid-damage assessments.</li></ul>
+    </div>
+  </section>
+
+  <!-- DAY 3 -->
+  <section class="section-card">
+    <div class="overlay">
+      <h2 class="section">Day 3 – Web-GIS Apps & Multimedia Cartography</h2>
+      <h4>Content</h4>
+      <ul><li>Interactive maps with Leaflet/MapLibre.</li><li>Story maps, HTML tweaks, geotagging.</li><li>Sharing dashboards.</li></ul>
+      <h4>Activities</h4>
+      <ul><li>Publish Day-2 survey web map.</li><li>Add filters, charts, media popups.</li></ul>
+      <h4>Applications of Knowledge</h4>
+      <ul><li>Permit viewers, tourism story maps.</li><li>Disaster live maps.</li><li>Urban green atlases.</li><li>Crop watch portals.</li></ul>
+    </div>
+  </section>
+
+  <!-- DAY 4 -->
+  <section class="section-card">
+    <div class="overlay">
+      <h2 class="section">Day 4 – Remote Sensing Analysis</h2>
+      <h4>Content</h4>
+      <ul><li>Google Earth Engine datasets.</li><li>Spectral Indices: NDVI, NDWI, NDBI.</li><li>Change detection & monitoring.</li></ul>
+      <h4>Activities</h4>
+      <ul><li>NDVI time-series crop analysis.</li><li>Flood/burn scar mapping.</li><li>Deforestation detection.</li></ul>
+      <h4>Applications of Knowledge</h4>
+      <ul><li>Crop monitoring, water mapping, urban growth.</li><li>Flood/disaster assessments.</li><li>Deforestation monitoring.</li></ul>
+    </div>
+  </section>
+
+  <!-- DAY 5 -->
+  <section class="section-card">
+    <div class="overlay">
+      <h2 class="section">Day 5 – AI-Powered Object Detection</h2>
+      <h4>Content</h4>
+      <ul><li>Dataset preparation & labeling.</li><li>Train DL models.</li><li>Validation & GIS integration.</li></ul>
+      <h4>Activities</h4>
+      <ul><li>Train object detector (buildings, vehicles, crops).</li><li>Validate accuracy + publish map.</li></ul>
+      <h4>Applications of Knowledge</h4>
+      <ul><li>Building footprints, traffic vehicles.</li><li>Coconut/paddy detection.</li><li>Solar rooftops, coastal structures.</li></ul>
+    </div>
+  </section>
+
+  <!-- DAY 6 -->
+  <section class="section-card">
+    <div class="overlay">
+      <h2 class="section">Day 6 – Urban Big Data & AI</h2>
+      <h4>Content</h4>
+      <ul><li>Urban data: social media, mobile, remote sensing.</li><li>Web scraping & preprocessing.</li><li>APIs & REST with GIS.</li></ul>
+      <h4>Activities</h4>
+      <ul><li>Sentiment dashboard with Maps API.</li><li>Scrape real estate datasets.</li><li>Connect web portals to GIS.</li></ul>
+      <h4>Applications of Knowledge</h4>
+      <ul><li>Public opinion analysis.</li><li>Land value monitoring.</li><li>Urban growth tracking.</li></ul>
+    </div>
+  </section>
+
+  <!-- DAY 7 -->
+  <section class="section-card">
+    <div class="overlay">
+      <h2 class="section">Day 7 – Applications in Drone Tech</h2>
+      <h4>Content</h4>
+      <ul><li>Drone basics & regulations.</li><li>Live capture demos.</li><li>Industry expert knowledge.</li></ul>
+      <h4>Activities</h4>
+      <ul><li>Flight planning simulation.</li><li>Process orthomosaics/DSM.</li><li>QA/QC drone data.</li></ul>
+      <h4>Applications of Knowledge</h4>
+      <ul><li>Agriculture: crop monitoring.</li><li>Forestry canopy mapping.</li><li>Tourism 3D visualization.</li><li>Airport inspections.</li><li>Local authority mapping.</li></ul>
+    </div>
+  </section>
+
+  <!-- VIDEO -->
+  <section class="section-card">
+    <div class="overlay">
+      <h2 class="section">Watch the Promotional Video</h2>
+      <div class="video">
+        <iframe src="https://www.youtube.com/embed/QbCQbIafT4A" allowfullscreen></iframe>
+      </div>
+    </div>
+  </section>
+
+</div>
+
+<footer>&copy; 2025 Department of Town &amp; Country Planning, University of Moratuwa</footer>
+
+<script>
+  const slideUrls=[
+    "https://www.shutterstock.com/shutterstock/videos/3570031485/thumb/10.jpg?ip=x480",
+    "https://ceylonpulse.com/wp-content/uploads/2023/07/33.webp",
+    "https://www.actian.com/wp-content/uploads/2023/12/business-analytics.jpg",
+    "https://sgp1.digitaloceanspaces.com/cic-react-redesign/images/our-segments/A_agricultural_drone_hovering_over_a_vibrant_a_Sri_Lan.webp",
+    "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=1600&auto=format&fit=crop",
+    "https://www.esri.com/arcgis-blog/wp-content/uploads/2020/07/clustering-with-labels.png"
+  ];
+  const hero=document.querySelector('.hero');
+  slideUrls.forEach((u,i)=>{const s=document.createElement('div');s.className='slide';s.style.backgroundImage=`url('${u}')`;if(i===0) s.classList.add('active');hero.appendChild(s);});
+  let idx=0;
+  setInterval(()=>{const slides=document.querySelectorAll('.slide');slides[idx].classList.remove('active');idx=(idx+1)%slides.length;slides[idx].classList.add('active');},2000);
+</script>
+
+</body>
+</html>
